@@ -3,48 +3,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Africash</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700,1&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body>
-    <header>
-      <nav>
-        <img id="img" src="image/logo.png" alt="" />
-        <div class="general">
-          <div class="nav-link">
+  <body class="overflow-x-clip" >
+    <header class="fixed w-full bg-white z-50">
+      <nav
+        class="fixed w-full flex bg-white  justify-between py-[10px] px-[20px] md:px-[70px] items-center border-b-[4px] border-[#E7E7E7]"
+      >
+        <img class="w-[120px]" id="img" src="image/logo.png" alt="" />
+        <div class="md:flex gap-[40px] hidden">
+          <div class="flex items-center gap-[30px]">
             <a href="#">About</a>
             <a href="#">Features</a>
             <a href="#">Blog</a>
             <a href="#">Contact</a>
           </div>
-          <div class="nav-button">
-            <button class="btn-1">Login</button>
-            <button class="btn-2">Signup</button>
+          <div class="flex gap-[21px]">
+            <button class="btn text-[#068353]">Login</button>
+            <button class="btn bg-[#068353] text-white">Signup</button>
           </div>
+        </div>
+        <div class="md:hidden">
+          <button
+            id="menu-btn"
+            type="button"
+            class="z-40 block hamburger md:hidden focus:outline-none"
+          >
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
         </div>
       </nav>
     </header>
 
-    <main>
-      <section class="firstSection">
-        <div class="div1">
+    <!-- mobile menu -->
+    <div
+      id="menu"
+      class=" fixed top-0  mt-[3rem] flex-col self-end hidden w-full h-[40vh] py-1 pt-15 pl-12 space-y-3 text-lg text-black z-50 uppercase bg-white"
+    >
+      <a class="hover:text-[#006E41]" href="#">About</a>
+      <a class="hover:text-[#006E41]" href="#">Features</a>
+      <a class="hover:text-[#006E41]" href="#">Blog</a>
+      <a class="hover:text-[#006E41]" href="#">Contact</a>
+      <div class="flex justify-between">
+        <button class="btn text-[#068353]">Login</button>
+        <button class="btn bg-[#068353] text-white">Signup</button>
+      </div>
+    </div>
+    <!-- main menu part -->
+    <main class="mx-auto">
+      <!-- first section -->
+      <section
+        class="relative flex items-center px-[10px] md:mx-0 md:pl-[70px] pt-[40px] h-[83vh]"
+      >
+        <div class="div1 text-center md:text-start mt-[-12rem] md:mt-0">
           <div>
-            <h1 class="h1">Africa in one finanacial platform</h1>
-            <p class="paragraph">
+            <h1 class="md:text-[50px] font-bold text-[36px] px-0">
+              Africa in one finanacial platform
+            </h1>
+            <p class="md:w-[45%] text-[18px]">
               Africash is a digital ecosystem designed to make Africa one. It’s
               goal is to bring the dream of financial inclusion to all people
               across the continent.
             </p>
           </div>
-          <button>Get started-It's free</button>
+          <button
+            class="bg-[#068353] py-[10px] px-[25px] text-white rounded-[30px]"
+          >
+            Get started-It's free
+          </button>
         </div>
-        <img id="bg1" src="image/bg1.png" alt="" />
+        <img
+          class="h-[250px] mt-[24rem] md:mt-0 md:h-[500px] absolute z-[-1] md:right-0 md:top-[100px]"
+          src="image/bg1.png"
+          alt=""
+        />
       </section>
-
-      <section id="brand">
+      <!-- brand section -->
+      <section
+        id="brand"
+        class="flex mt-[6rem] gap-[2rem] md:gap-[6rem] bg-[#EDF0F5] py-[50px] px-[5px] md:px-[20px] justify-start md:justify-center items-center overflow-x-scroll"
+      >
         <img
           src="https://res.cloudinary.com/dhvwthnzq/image/upload/v1713865047/africash/Forbes_logo_lew1nw.png"
           alt=""
@@ -66,43 +110,381 @@
           alt=""
         />
       </section>
+
+      <!-- section 3 -->
       <section>
-        <div class="h2">
-          <h2 >
+        <div class="flex items-center justify-center mt-[30px]">
+          <h2
+            class="md:w-[49rem] font-semibold md:font-bold md:text-[35px] text-[20px] text-center w-[15rem]"
+          >
             Trusted by <span style="color: #068353">200 Million+ </span> active
-            users across 54 countries
+            users across
+            <span class="md:ml-[8rem]">54 countries</span>
           </h2>
         </div>
-        
-        <div class="first">
-          <img 
-          id="imag"
-          src="https://res.cloudinary.com/dhvwthnzq/image/upload/v1713868358/africash/Group_1_tezmqi.png" alt="" />
-          <div class="firstDiv">
-            <h2>Travel every country in Africa without hopping on a plane </h2>
-            <p>We are
-              building a digital community that will empower you to take control
-              of your money and make it work for you.</p>
-            <button class="button">Learn More</button>
-            
-            
+
+        <div class="flex md:flex-row flex-col justify-normal md:gap-[15rem]">
+          <img
+            class="md:ml-[7rem] md:h-[30rem] h-[20rem] ml-[4rem] mt-8"
+            src="https://res.cloudinary.com/dhvwthnzq/image/upload/v1713868358/africash/Group_1_tezmqi.png"
+            alt=""
+          />
+          <div class="md:w-[28rem] md:pt-[8rem] pt-[2rem] px-[18px]">
+            <h2
+              class="md:w-[40rem] md:font-bold font-semibold md:text-[35px] text-[25px] w-[20rem]"
+            >
+              Travel every country in Africa without hopping on a plane
+            </h2>
+            <p class="md:w-full w-[24rem]">
+              We are building a digital community that will empower you to take
+              control of your money and make it work for you.
+            </p>
+            <button class="border-none bg-white text-[#068353] mr-4">
+              Learn More
+            </button>
           </div>
         </div>
-        <div class="sec">
-          <div class="secDiv">
-          <h2>  Earn rewards as you spend</h2>
-          <p> We are building a digital community that
-            will empower you to take control of your money and make it work for
-            you.</p>
-          <button class="button">Learn More</button>
-           
+        <div
+          class="flex md:flex-row flex-col-reverse mt-[5rem] md:mt-0 gap-[20px] md:gap-[15rem]"
+        >
+          <div class="md:w-[28rem] md:pt-[8rem] md:ml-[15rem] mx-8">
+            <h2
+              class="md:w-[40rem] md:font-bold font-semibold text-[25px] w-[25rem] md:text-[35px]"
+            >
+              Earn rewards as you spend
+            </h2>
+            <p class="md:w-full w-[24rem]">
+              We are building a digital community that will empower you to take
+              control of your money and make it work for you.
+            </p>
+            <button class="border-none bg-white text-[#068353] mr-4">
+              Learn More
+            </button>
           </div>
           <img
-          id="imag"
-          class="imag1"
-           src="https://res.cloudinary.com/dhvwthnzq/image/upload/v1713868357/africash/Group_2_1_i1joxr.png" alt="" />
+            class="md:ml-0 md:h-[30rem] h-[20rem] ml-[4rem] md:mr-[10rem]"
+            src="https://res.cloudinary.com/dhvwthnzq/image/upload/v1713868357/africash/Group_2_1_i1joxr.png"
+            alt=""
+          />
         </div>
       </section>
+      <!-- section4 -->
+      <section class="mt-[5rem] ">
+        <div class="grid md:grid-cols-2">
+          <div
+            class="md:order-none order-last bg-[#068353] md:pl-[10rem] pt-[5rem] md:pt-[10rem] pl-[4rem] md:pr-[6rem] text-white pb-[4rem] "
+          >
+            <h1 class="md:text-[45px] mb-4 font-semibold">Perks of using us?</h1>
+            <ul class="flex flex-col gap-8 md:text-[25px]">
+              <li class="flex gap-4 imd:tems-center">
+                <svg
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#ffff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M17.8086 9.70558C18.1983 9.31421 18.1969 8.68105 17.8056 8.29137C17.4142 7.90169 16.781 7.90305 16.3913 8.29442L10.6215 14.0892L7.30211 10.816C6.90886 10.4283 6.27571 10.4327 5.88793 10.8259C5.50015 11.2192 5.50459 11.8524 5.89784 12.2401L9.92581 16.212C10.3177 16.5985 10.9482 16.5956 11.3366 16.2056L17.8086 9.70558Z"
+                      fill="#ffff"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"
+                      fill="#ffff"
+                    ></path>
+                  </g>
+                </svg>
+                No monthly fees
+              </li>
+              <li class="flex gap-4 items-center">
+                <svg
+                height="20px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#ffff"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M17.8086 9.70558C18.1983 9.31421 18.1969 8.68105 17.8056 8.29137C17.4142 7.90169 16.781 7.90305 16.3913 8.29442L10.6215 14.0892L7.30211 10.816C6.90886 10.4283 6.27571 10.4327 5.88793 10.8259C5.50015 11.2192 5.50459 11.8524 5.89784 12.2401L9.92581 16.212C10.3177 16.5985 10.9482 16.5956 11.3366 16.2056L17.8086 9.70558Z"
+                    fill="#ffff"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"
+                    fill="#ffff"
+                  ></path>
+                </g>
+              </svg>
+                Shop internationally, no fees added
+              </li>
+              <li class="flex gap-4 items-center">
+                <svg
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#ffff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M17.8086 9.70558C18.1983 9.31421 18.1969 8.68105 17.8056 8.29137C17.4142 7.90169 16.781 7.90305 16.3913 8.29442L10.6215 14.0892L7.30211 10.816C6.90886 10.4283 6.27571 10.4327 5.88793 10.8259C5.50015 11.2192 5.50459 11.8524 5.89784 12.2401L9.92581 16.212C10.3177 16.5985 10.9482 16.5956 11.3366 16.2056L17.8086 9.70558Z"
+                      fill="#ffff"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"
+                      fill="#ffff"
+                    ></path>
+                  </g>
+                </svg>
+                Instant Reversals
+              </li>
+              <li class="flex gap-4 items-center">
+                <svg
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#ffff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M17.8086 9.70558C18.1983 9.31421 18.1969 8.68105 17.8056 8.29137C17.4142 7.90169 16.781 7.90305 16.3913 8.29442L10.6215 14.0892L7.30211 10.816C6.90886 10.4283 6.27571 10.4327 5.88793 10.8259C5.50015 11.2192 5.50459 11.8524 5.89784 12.2401L9.92581 16.212C10.3177 16.5985 10.9482 16.5956 11.3366 16.2056L17.8086 9.70558Z"
+                      fill="#ffff"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"
+                      fill="#ffff"
+                    ></path>
+                  </g>
+                </svg>
+                Continental debit card
+              </li>
+            </ul>
+          </div>
+          <div class="bg-[#8AF1BB] relative">
+            <div class="md:pl-[10rem] py-[3rem] md:pr-[3rem] pl-[3rem] pr-[3rem] ">
+              <div
+                class=" bg-[#45AE7B] md:pl-[40px] pl-[10px] pr-[10px] md:pr-[5px]  pt-[10px] rounded-xl md:rounded-tr-[7rem] rounded-tr-[5rem]"
+              >
+                <img class="h-[18rem] md:h-[33rem] " src="image/pic1.png" alt="" />
+              </div>
+            </div>
+            <div class="">
+              <div class="z-10 bg-black absolute bottom-[45px] md:bottom-[19px] left-[1.2rem] h-[4.3rem] w-[17.8rem] md:h-[4.5rem] md:w-[24rem] rounded-xl"></div>
+              <div class="z-20 absolute md:bottom-[2rem] bottom-[3.8rem] left-[1.2rem] bg-white rounded-xl flex justify-between px-[8px] md:px-[2rem] py-[8px] md:py-[1rem]">
+                <p class="flex ">
+                <svg
+                class="bg-[#D9D8F7] rounded-full text-center px-2 py-2 mr-3"
+                  height="40px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5.625 15C5.625 14.5858 5.28921 14.25 4.875 14.25C4.46079 14.25 4.125 14.5858 4.125 15H5.625ZM4.875 16H4.125H4.875ZM19.275 15C19.275 14.5858 18.9392 14.25 18.525 14.25C18.1108 14.25 17.775 14.5858 17.775 15H19.275ZM11.1086 15.5387C10.8539 15.8653 10.9121 16.3366 11.2387 16.5914C11.5653 16.8461 12.0366 16.7879 12.2914 16.4613L11.1086 15.5387ZM16.1914 11.4613C16.4461 11.1347 16.3879 10.6634 16.0613 10.4086C15.7347 10.1539 15.2634 10.2121 15.0086 10.5387L16.1914 11.4613ZM11.1086 16.4613C11.3634 16.7879 11.8347 16.8461 12.1613 16.5914C12.4879 16.3366 12.5461 15.8653 12.2914 15.5387L11.1086 16.4613ZM8.39138 10.5387C8.13662 10.2121 7.66533 10.1539 7.33873 10.4086C7.01212 10.6634 6.95387 11.1347 7.20862 11.4613L8.39138 10.5387ZM10.95 16C10.95 16.4142 11.2858 16.75 11.7 16.75C12.1142 16.75 12.45 16.4142 12.45 16H10.95ZM12.45 5C12.45 4.58579 12.1142 4.25 11.7 4.25C11.2858 4.25 10.95 4.58579 10.95 5H12.45ZM4.125 15V16H5.625V15H4.125ZM4.125 16C4.125 18.0531 5.75257 19.75 7.8 19.75V18.25C6.61657 18.25 5.625 17.2607 5.625 16H4.125ZM7.8 19.75H15.6V18.25H7.8V19.75ZM15.6 19.75C17.6474 19.75 19.275 18.0531 19.275 16H17.775C17.775 17.2607 16.7834 18.25 15.6 18.25V19.75ZM19.275 16V15H17.775V16H19.275ZM12.2914 16.4613L16.1914 11.4613L15.0086 10.5387L11.1086 15.5387L12.2914 16.4613ZM12.2914 15.5387L8.39138 10.5387L7.20862 11.4613L11.1086 16.4613L12.2914 15.5387ZM12.45 16V5H10.95V16H12.45Z"
+                      fill="#403BD7"
+                    ></path>
+                  </g>
+                </svg>
+                <p class="flex flex-col font-bold"> <span class="text-lg"> Wardrobe</span> <span class="text-[#A0A0A0]">Saving </span></p>
+                </p>
+                
+                  <p class="flex items-center ml-[2rem]  md:ml-[5rem] text-lg font-bold text-[#138A5C]">
+
+                    <svg class="mr-[-10px]" fill="#47A380"  height="30px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" stroke="#47A380"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="65.536"></g><g id="SVGRepo_iconCarrier"><path d="M541.7 768v-45.3c46.3-2.4 81.5-15 108.7-37.8 27.2-22.8 40.8-53.1 40.8-88.2 0-37.8-11-65.7-35.3-83.4-24.6-20.1-59.8-35.4-111.6-45.3h-2.6V351.8c35.3 5.1 65.3 15 95.1 35.4l43.6-55.5c-43.6-27.9-89.9-42.9-138.8-45.3V256h-40.8v30.3c-40.8 2.4-76.3 15-103.5 37.8-27.2 22.8-40.8 53.1-40.8 88.2s11 63 35.3 80.7c21.7 17.7 59.8 32.7 108.7 42.9v118.5c-38.2-5.1-76.3-22.8-114.2-53.1l-48.9 53.1c48.9 40.5 103.5 63 163.3 68.1V768h41zm2.6-219.6c27.2 7.5 43.6 15 54.4 22.8 8.1 10.2 13.6 20.1 13.6 35.4s-5.5 25.2-19.1 35.4c-13.6 10.2-30.1 15-48.9 17.7V548.4zM449.2 440c-8.1-7.5-13.6-20.1-13.6-32.7 0-15 5.5-25.2 16.2-35.4 13.6-10.2 27.2-15 48.9-17.7v108.6c-27.2-7.8-43.4-15.3-51.5-22.8z"></path></g></svg>
+                40.00</p>
+              </div>
+            </div>
+            <div>
+            <div class="absolute z-10 top-[5rem] md:top-[9rem] right-[17px]  bg-[#E78C9D] rounded-xl  md:px-[3rem] px-[1rem] py-[1.5rem] text-center">
+              <span class="bg-[#F8DDE2] text-black text-center  font-bold px-4 py-2 md:px-4 md:py-3 rounded-full">S</span>
+              <p class="mt-[20px]  md:mt-[3rem] text-white font-normal text-lg">Savings</p>
+              <p class="flex text-white md:text-xl items-center tracking-wider font-medium mt-[-5px] md:mt-0">
+                <svg class="mr-[-5px] md:font-medium md:text-xl" fill="#ffff"  height="30px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" stroke="#47A380"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="65.536"></g><g id="SVGRepo_iconCarrier"><path d="M541.7 768v-45.3c46.3-2.4 81.5-15 108.7-37.8 27.2-22.8 40.8-53.1 40.8-88.2 0-37.8-11-65.7-35.3-83.4-24.6-20.1-59.8-35.4-111.6-45.3h-2.6V351.8c35.3 5.1 65.3 15 95.1 35.4l43.6-55.5c-43.6-27.9-89.9-42.9-138.8-45.3V256h-40.8v30.3c-40.8 2.4-76.3 15-103.5 37.8-27.2 22.8-40.8 53.1-40.8 88.2s11 63 35.3 80.7c21.7 17.7 59.8 32.7 108.7 42.9v118.5c-38.2-5.1-76.3-22.8-114.2-53.1l-48.9 53.1c48.9 40.5 103.5 63 163.3 68.1V768h41zm2.6-219.6c27.2 7.5 43.6 15 54.4 22.8 8.1 10.2 13.6 20.1 13.6 35.4s-5.5 25.2-19.1 35.4c-13.6 10.2-30.1 15-48.9 17.7V548.4zM449.2 440c-8.1-7.5-13.6-20.1-13.6-32.7 0-15 5.5-25.2 16.2-35.4 13.6-10.2 27.2-15 48.9-17.7v108.6c-27.2-7.8-43.4-15.3-51.5-22.8z"></path></g></svg>
+              3,000
+              </p>
+            </div>
+            <div class="absolute top-[6rem] md:top-[10rem] h-[9rem] md:h-[11rem] rounded-lg w-[6.9rem] md:w-[11.7rem] bg-black right-[7px] md:right-[5px]"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- scetion 5-->
+      <section class="h-[80vh] mt-[5rem]">
+        <div>
+          <h1 class="text-center mx-[2rem] md:mx-auto font-semibold text-[25px] md:text-[35px] w-[21rem] md:w-[32rem]">Still on the fence, here's what 
+            <span class="text-[#239267]">our users</span> are saying</h1>
+        </div>
+        <div class="flex gap-9 overflow-x-scroll mt-[4rem] md:mt-[8rem] ml-[1.5rem] md:ml-[6rem] pb-[3rem] no-scrollbar">
+          <!-- first grid -->
+          <div class="border-2 shadow-xl shadow-b shadow-[#E1E1E1] border-black rounded-2xl px-[1rem] md:px-[2rem] py-[1rem]">
+            <p class="md:w-[25rem] w-[20rem] relative  text-sm font-bold">
+              <img class="w-[20px]" src="image/open.png" alt="">
+              Africash is a really good app and it has made my life easier. I can now order as many things as
+               I want to from Ghana and have them delivered to my doorstep.
+                It's safe, easy and secure.
+              <img class="w-[20px] absolute right-0" src="image/close.png" alt="">
+              </p>
+              <div class=" mt-[3rem] border-b border-[1px] border-black"></div>
+              <div class="flex gap-4 mt-2 items-center">
+                <img class="h-[70px]" src="image/pic4.png" alt="">
+                <p class="text-xl font-normal"> <span class="font-bold">Laura Koffi</span><br>
+                  Entrepreneur</p>
+              </div>
+            </div>
+            <!-- second grid -->
+            <div class="border-2 shadow-xl shadow-b shadow-[#E1E1E1] border-black rounded-2xl px-[1rem] md:px-[2rem] py-[1rem]">
+              <p class="md:w-[25rem] w-[20rem] relative  text-sm font-bold">
+                <img class="w-[20px]" src="image/open.png" alt="">
+                Africash is a really good app and it has made my life easier. I can now order as many things as
+                 I want to from Ghana and have them delivered to my doorstep.
+                  It's safe, easy and secure.
+                <img class="w-[20px] absolute right-0" src="image/close.png" alt="">
+                </p>
+                <div class=" mt-[3rem] border-b border-[1px] border-black"></div>
+                <div class="flex gap-4 mt-2 items-center">
+                  <img class="h-[70px]" src="image/pic3.png" alt="">
+                  <p class="text-xl font-normal"> <span class="font-bold">David Aguda</span><br>
+                    Software Developer</p>
+                </div>
+              </div>
+              <!-- third grid -->
+              <div class="border-2 shadow-xl shadow-b shadow-[#E1E1E1] border-black rounded-2xl px-[1rem] md:px-[2rem] py-[1rem]">
+                <p class="md:w-[25rem] w-[20rem] relative  text-sm font-bold">
+                  <img class="w-[20px]" src="image/open.png" alt="">
+                  Africash is a really good app and it has made my life easier. I can now order as many things as
+                   I want to from Ghana and have them delivered to my doorstep.
+                    It's safe, easy and secure.
+                  <img class="w-[20px] absolute right-0" src="image/close.png" alt="">
+                  </p>
+                  <div class=" mt-[3rem] border-b border-[1px] border-black"></div>
+                  <div class="flex gap-4 mt-2 items-center">
+                    <img class="h-[70px]" src="image/pic4.png" alt="">
+                    <p class="text-xl font-normal"> <span class="font-bold">Ifeoma Oluchi</span><br>
+                      Retailer</p>
+                  </div>
+                </div>
+                <!-- 4th grid -->
+                <div class="border-2 shadow-xl shadow-b shadow-[#E1E1E1] border-black rounded-2xl px-[1rem] md:px-[2rem] py-[1rem]">
+                  <p class="md:w-[25rem] w-[20rem] relative  text-sm font-bold">
+                    <img class="w-[20px]" src="image/open.png" alt="">
+                    Africash is a really good app and it has made my life easier. I can now order as many things as
+                     I want to from Ghana and have them delivered to my doorstep.
+                      It's safe, easy and secure.
+                    <img class="w-[20px] absolute right-0" src="image/close.png" alt="">
+                    </p>
+                    <div class=" mt-[3rem] border-b border-[1px] border-black"></div>
+                    <div class="flex gap-4 mt-2 items-center">
+                      <img class="h-[70px]" src="image/pic2.png" alt="">
+                      <p class="text-xl font-normal"> <span class="font-bold">Laura Koffi</span><br>
+                        Accountant</p>
+                    </div>
+                  </div>
+        </div>
+      </section>
+
+      <!-- section 6 -->
+      <section class=" md:mt-[1rem] mb-[2rem] h-[60vh] md:h-[70vh] bg-[#068353] rounded-lg">
+        <div class="relative mt-[-20px] md:mt-0">
+          <img class="absolute h-[4rem] md:h-[9rem] top-[9rem] md:left-[12rem] left-[1rem]" src="image/67.png" alt="">
+          <img class="absolute h-[4rem]  md:h-[9rem] top-[19rem] left-[2rem] md:left-[19rem]" src="image/business-3d-golden-bitcoin-front.png" alt="">
+          <h1 class="md:font-bold font-semibold  pt-[10rem] text-[2rem] md:text-[3rem] text-white text-center mx-[75px] md:mx-auto">Do business with the world</h1>
+          <img class="absolute h-[2rem]   top-[16rem] left-[5.4rem] md:left-[31rem] md:h-[4rem]" src="image/Group.png" alt="">
+          <img class="absolute h-[2rem] top-[16rem] left-[13rem] md:left-[50rem] md:h-[4rem]" src="image/Google_Play_Store_badge_EN.png" alt="">
+          <img class="absolute h-[4rem]  top-[10rem] md:top-[4rem] md:h-[8rem] md:right-[5rem] right-[1rem]" src="image/business-3d-flying-dollar-note.png" alt="">
+        <img class="h-[8rem] md:h-[11rem] absolute right-0 top-[21.3rem]  md:top-[17.3rem]" src="image/Rectangle.png" alt="">
+        </div>
+
+      </section>
+
+      <!-- secton 7 -->
+      <section class="md:h-[50vh] h-[30vh]">
+        <div class="mt-[8rem] md:ml-[12rem] ">
+          <h1 class="font-semibold mb-[4rem] text-[25px] mx-[2rem] md:mx-0 md:text-[39px] md:w-full w-[22rem]">Keep up with us by signing up for our newsletter</h1>
+          <div class="flex justify-between">
+            <div class="relative">
+            <input class=" pl-[10px] border-2 border-black outline-none rounded-full py-4 w-[20rem] md:w-[45rem] mx-[2rem] md:mx-0" type="text" placeholder="Email address">
+            <button class="absolute left-[15.8rem] md:left-[38.9rem] bottom-[0.3rem] text-white bg-[#068353] py-3 px-2 rounded-full">Subscribe</button>
+            </div>
+
+            <div class="md:flex gap-2 mr-[5rem] hidden ">
+              <svg class="bg-[#73DAA5] px-2 py-2 rounded-full border-2 border-[#068353]"  height="60px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#068353"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#068353"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#068353"></path> </g></svg>
+              <svg class="bg-[#73DAA5] px-2 py-2 rounded-full border-2 border-[#068353]"  height="60px" viewBox="0 -2 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>twitter [#154]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-60.000000, -7521.000000)" fill="#068353"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705" id="twitter-[#154]"> </path> </g> </g> </g> </g></svg>
+              <svg class="bg-[#73DAA5] px-2 py-2 rounded-full border-2 border-[#068353]" fill="#068353"  height="60px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"></path></g></svg>
+              <svg class="bg-[#73DAA5] px-2 py-2 rounded-full border-2 border-[#068353]" height="60px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z" fill="#068353"></path> </g></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer section -->
+      <footer class="flex justify-between text-white flex-col md:flex-row bg-[#068353] px-[2rem] md:px-[5rem] py-[5rem] ">
+        <img class="h-[70px]" id="img" src="image/logo.png" alt="" />
+        <div class="flex flex-col gap-3 mb-4 md:mb-0">
+          <h1 class="font-semibold">Company</h1>
+          <a href="">About us</a>
+          <a href="">Blog</a>
+          <a href="">Careers</a>
+          <a href="">Community</a>
+        </div>
+        <div class="flex flex-col gap-3 mb-4 md:mb-0">
+          <h1 class="font-semibold">Features</h1>
+          <a href="">Within Africa</a>
+          <a href="">International</a>
+        </div>
+        <div class="flex flex-col gap-3 mb-4 md:mb-0">
+          <h1 class="font-semibold">Help</h1>
+          <a href="">Contact</a>
+          <a href="">Faq</a>
+        </div>
+        <div class="flex flex-col gap-3">
+          <h1 class="font-semibold" >Legal</h1>
+          <a href="">Terms & Conditions</a>
+          <a href="">Privacy Policy</a>
+        </div>
+      </footer>
     </main>
+
+    <script src="index.js"></script>
   </body>
 </html>
